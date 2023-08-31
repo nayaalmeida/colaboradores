@@ -45,6 +45,7 @@ class _ColaboradoresState extends State<Colaboradores> {
         itemBuilder: (context, i) {
           var dados = listaColab[i];
           return Column(
+          
             children: [
               Row(
                 children: [
@@ -52,7 +53,11 @@ class _ColaboradoresState extends State<Colaboradores> {
                     "assets/" + dados['imagem'].toString(),
                     width: 82,
                   ),
+                  SizedBox(
+                    width: 10,
+                  ),
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
                         dados['Nome'].toString(),
